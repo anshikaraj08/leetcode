@@ -20,11 +20,11 @@ int solve(vector<vector<int>>& matrix,int i,int j){
 }
     int minFallingPathSum(vector<vector<int>>& matrix) {
         int n=matrix.size();
-        
+        dp = vector<vector<int>>(n, vector<int>(n, -1));
+vis = vector<vector<int>>(n, vector<int>(n, 0));
         int ans=1e9;
         for(int i=0;i<n;++i){
-            dp.resize(n,vector<int>(n,-1));
-            vis.resize(n,vector<int>(n,0));
+            
             ans= min(ans,solve(matrix,0,i));
         }
         return ans;
