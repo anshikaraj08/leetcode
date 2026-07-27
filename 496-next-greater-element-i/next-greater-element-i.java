@@ -6,27 +6,19 @@ class Solution {
 
 
         for(int i=n-1;i>=0;i--){
-            if(st.empty()){
-                mp.put(nums2[i],-1);
-                st.push(nums2[i]);
-            }
-            else if(!st.empty() && st.peek()<nums2[i]){
+
                 while(!st.empty() && st.peek()<nums2[i]){
                     st.pop();
                 }
-                if(st.empty()){
-                    st.push(nums2[i]);
+
+
+                if(st.empty()){ 
                     mp.put(nums2[i],-1);
                 }else{//
                     mp.put(nums2[i],st.peek());
-                    st.push(nums2[i]);
-
+                 
                 }
-            }
-            else if(!st.empty() && st.peek()>nums2[i]){
-                mp.put(nums2[i],st.peek());
-                st.push(nums2[i]);
-            }
+             st.push(nums2[i]);
         } 
         
 
