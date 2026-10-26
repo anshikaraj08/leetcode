@@ -4,14 +4,13 @@ class Solution {
         int idx=-1;
         int p=0;
 
-        if (nums.get(n - 1) > nums.get(0)) {
-            p++;
-        }
+        
 
 
 
-        for(int i=0;i<n-1;++i){
-            if(nums.get(i)>nums.get(i+1)){
+        for(int i=0;i<n;++i){
+            int next=(i+1)%n;
+            if(nums.get(i)>nums.get(next)){
                 idx=i;
                 p++;
             }
