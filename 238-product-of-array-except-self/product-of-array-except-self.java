@@ -17,7 +17,7 @@ class Solution {
         for(int i= n-1;i>=0;i--){
             ans[i]=right*ans[i];
             
-                right*=nums[i];
+            right*=nums[i];
         }
         return ans;
 
