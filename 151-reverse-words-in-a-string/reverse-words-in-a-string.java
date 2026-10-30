@@ -20,7 +20,7 @@ class Solution {
                 i++;
             }
             word.reverse();
-            System.out.println(word.toString());
+            
 
             if(word.length()>=1){
                 
