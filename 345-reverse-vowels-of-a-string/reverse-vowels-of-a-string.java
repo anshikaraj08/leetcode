@@ -26,7 +26,7 @@ class Solution {
                 swap(sb,i,j);  
                 i++;
                 j--;    
-            }else if(isVowel(ci) && !isVowel(cj)){
+            }else if(!isVowel(cj)){
                 j--;
             }else{
                 i++;
